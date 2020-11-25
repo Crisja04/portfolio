@@ -15,5 +15,6 @@
   "bugs": {
     "url": "https://github.com/Crisja04/portfolio/issues"
   },
-  "homepage": "https://github.com/Crisja04/portfolio#readme"
+  "homepage": "https://github.com/Crisja04/portfolio#readme",
+  "dependencies": {}
 }
