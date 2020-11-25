@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "projects start page",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crisja04/portfolio.git"
+  },
+  "author": "Cristian Tavarez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crisja04/portfolio/issues"
+  },
+  "homepage": "https://github.com/Crisja04/portfolio#readme"
+}
