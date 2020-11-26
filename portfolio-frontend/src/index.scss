@@ -9,4 +9,8 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-@import "custom";
+$theme-colors: (
+  "main": #222a3a,
+  "auxiliar": #6e758a,
+);
+@import "node_modules/bootstrap/scss/bootstrap";
