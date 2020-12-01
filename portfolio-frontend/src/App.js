@@ -1,19 +1,31 @@
+import React from "react";
 // Components
 import Navigationbar from "./components/Navigationbar";
-import Projectslist from "./components/Projectslist";
-import Loading from "./components/Loading";
 import Footer from "./components/Footer";
+// Pages
+import Home from "./pages/Home";
+import Contact from "./pages/Contact";
+import Error from "./pages/Error";
+// Routing
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
-//Component Styling
-import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
-    <>
+    <Router>
       <Navigationbar />
-      <Projectslist />
-      <Loading />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="*">
+          <Error />
+        </Route>
+      </Switch>
       <Footer />
-    </>
+    </Router>
   );
 }
 

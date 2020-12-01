@@ -9,12 +9,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
-// Color theme
-// $primary: #222a3a !important;
-// $secondary: #6e758a !important;
-
-// $theme-colors: (
-//   "primary": $primary,
-//   "secondary": $secondary,
-// );
-//@import "node_modules/bootstrap/scss/bootstrap";
+//Color theme
+$theme-colors: (
+  "primary": #222a3a,
+  "secondary": #6e758a,
+);
+@import "node_modules/bootstrap/scss/bootstrap";
