@@ -10,8 +10,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 //Color theme
+/* 
+$dark-purple: #310a31ff;
+$rhythm: #847996ff;
+$green-sheen: #88b7b5ff;
+$cambridge-blue: #a7cab1ff;
+$eggshell: #f4ecd6ff;
+ */
+$action: #220078;
 $theme-colors: (
-  "primary": #222a3a,
-  "secondary": #6e758a,
+  "primary": #007822,
+  "action": $action,
 );
+
+$enable-shadows: true !default;
+
 @import "node_modules/bootstrap/scss/bootstrap";

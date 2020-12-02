@@ -7,16 +7,17 @@ const Projects = () => {
         <header>
           <h1 className="text-center mt-4 mb-3">Projects</h1>
         </header>
-        <section className="d-flex flex-wrap justify-content-md-between justify-content-center">
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
-          <ProjectCard />
+        <section className="container-fluid">
+          <div className="row ">
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+            <ProjectCard />
+          </div>
         </section>
       </main>
     </Container>
