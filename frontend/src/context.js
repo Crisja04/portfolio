@@ -9,7 +9,31 @@ const AppProvider = ({ children }) => {
 
   const fetchData = async () => {
     setLoading(true);
+    // Github graphql api call, must be implemented in backend (node & express) to properly hide credentials
+    // Loop over
+    // const repository = "portfolio";
+    // const getRepositoryIMG = (repository) => `{
+    // repository(owner:"Crisja04",name:"${repository}") {
+    //     openGraphImageUrl
+    // }`;
+
+    // const options = {
+    //   method: "post",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //     Authorization: "bearer <API-KEY>",
+    //   },
+    //   body: JSON.stringify({
+    //     query: getRepositoryIMG(repository),
+    //   }),
+    // };
+
+    // const tempData = await fetch(`https://api.github.com/graphql`, options).then((res) =>
+    //   res.json().then(console.log(res))
+    // );
+    // console.log(tempData);
     try {
+      // Github REST API, repository information request
       const response = await fetch(url);
       const data = await response.json();
       const finalData = data.map((item) => {

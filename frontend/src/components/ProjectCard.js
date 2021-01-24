@@ -1,5 +1,6 @@
 import { Card, Button } from "react-bootstrap";
-
+// Future functionality
+// Add custom image for every project openGraphImageUrl
 const ProjectCard = ({ name, description, url }) => {
   return (
     <div className="col-sm-12 col-md-6 col-lg-4 ">
@@ -9,7 +10,6 @@ const ProjectCard = ({ name, description, url }) => {
           <Card.Body className="d-flex flex-column justify-content-center text-center">
             <Card.Title>{name}</Card.Title>
             <Card.Text>{description}</Card.Text>
-
             <Button variant="action" href={url} target="_blank" className="mt-auto">
               Read more
             </Button>

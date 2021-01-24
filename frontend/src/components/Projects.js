@@ -18,7 +18,7 @@ const Projects = () => {
     <Container>
       <main className="mb-3">
         <header>
-          <h1 className="text-center mt-4 mb-3">Projects</h1>
+          <h1 className="text-center mt-4 mb-3">Mis proyectos</h1>
         </header>
         <section className="container-fluid">
           <div className="row ">
