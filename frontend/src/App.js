@@ -4,6 +4,8 @@ import Navigationbar from "./components/Navigationbar";
 import Footer from "./components/Footer";
 // Pages
 import Home from "./pages/Home";
+import About from "./pages/About";
+import Portfolio from "./pages/Portfolio";
 import Contact from "./pages/Contact";
 import Error from "./pages/Error";
 // Routing
@@ -19,6 +21,12 @@ function App() {
         </Route>
         <Route path="/contact">
           <Contact />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/portfolio">
+          <Portfolio />
         </Route>
         <Route path="*">
           <Error />
