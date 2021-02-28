@@ -30,11 +30,7 @@ $enable-shadows: true !default;
   color: rgba($color: #000000, $alpha: 1);
 }
 
-// Override default link styling
-a {
-  text-decoration: none !important;
-  color: black !important;
-}
+$link-color: black;
 
 // Default spacing between elements
 $grid-gutter-width: 10px !default;
