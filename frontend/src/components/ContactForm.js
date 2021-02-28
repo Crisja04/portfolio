@@ -1,33 +1,64 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Card, Button, Form,Container, Col, Row} from 'react-bootstrap'
 import {FaPhone, FaWhatsapp,FaTelegram,FaEnvelope,FaLinkedin} from 'react-icons/fa'
 
 const ContactForm = () => {
+  const [person, setPerson] = useState({
+    name: '',
+    email: '',
+    phone: '',
+    message: '',
+  });
+
+  // Form data encoding 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
+  const handleSubmit = (e) => {
+      fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: encode({ "form-name": "contact", ...person })
+      })
+        .then(() => alert("Success!"))
+        .catch(error => alert(error));
+    setPerson({
+        name: '',
+        email: '',
+        phone: '',
+        message: '',
+     })
+      e.preventDefault();
+    };
+
     return (
         <>
         <Container fluid="md">
           <Row>
             <Col xs={12} md={6}>
-              <Form name="contact">
+              <Form name="contact" onSubmit={handleSubmit}>
                  <input type="hidden" name="form-name" value="contact" />
                 <Form.Group controlId="formName">
                   <Form.Label name="name">Name</Form.Label>
-                  <Form.Control type="text" placeholder="Enter your Name" />
+                  <Form.Control type="text" placeholder="Enter your Name" value={person.name} onChange={(e) => setPerson({...person,name: e.target.value})}/>
                 </Form.Group>
                 <Form.Group controlId="formName">
                   <Form.Label name="email">Email address</Form.Label>
-                  <Form.Control type="email" placeholder="Enter your Email" />
+                  <Form.Control type="email" placeholder="Enter your Email" value={person.email} onChange={(e) => setPerson({...person, email: e.target.value})}/>
                   <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
                   </Form.Text>
                   <Form.Group controlId="formName">
                   <Form.Label name="phone">Phone</Form.Label>
-                  <Form.Control type="number" placeholder="Enter your Phone Number" />
+                  <Form.Control type="text" placeholder="Enter your Phone Number" value={person.phone} onChange={(e) => setPerson({...person, phone: e.target.value})}/>
                 </Form.Group>
                 </Form.Group>
                 <Form.Group controlId="formMessage">
                   <Form.Label name="message">Message</Form.Label>
-                  <Form.Control as="textarea" rows={2} placeholder="Enter your Message" style={{resize:"none"}}/>
+                  <Form.Control as="textarea" rows={2} placeholder="Enter your Message" value={person.message} style={{resize:"none"}} onChange={(e) => setPerson({...person, message: e.target.value})}/>
                 </Form.Group>
                 <Button variant="primary" type="submit">
                   Send
