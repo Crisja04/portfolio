@@ -1,31 +1,39 @@
 import React from 'react'
 import {Card, Button, Form,Container, Col, Row} from 'react-bootstrap'
-import {FaPhone, FaWhatsapp,FaTelegram} from 'react-icons/fa'
+import {FaPhone, FaWhatsapp,FaTelegram,FaEnvelope,FaLinkedin} from 'react-icons/fa'
 
 const ContactForm = () => {
     return (
         <>
         <Container fluid="md">
+          {/* Netlify form setup */}
+          <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+            <input type="text" name="name" />
+            <input type="email" name="email" />
+            <input type="number" name="phone" />
+            <textarea name="message"></textarea>
+          </form>
           <Row>
             <Col xs={12} md={6}>
-              <Form>
+              <Form name="contact">
+                 <input type="hidden" name="form-name" value="contact" />
                 <Form.Group controlId="formName">
-                  <Form.Label>Name</Form.Label>
+                  <Form.Label name="name">Name</Form.Label>
                   <Form.Control type="email" placeholder="Enter your Name" />
                 </Form.Group>
                 <Form.Group controlId="formName">
-                  <Form.Label>Email address</Form.Label>
+                  <Form.Label name="email">Email address</Form.Label>
                   <Form.Control type="email" placeholder="Enter your Email" />
                   <Form.Text className="text-muted">
                     We'll never share your email with anyone else.
                   </Form.Text>
                   <Form.Group controlId="formName">
-                  <Form.Label>Phone</Form.Label>
+                  <Form.Label name="phone">Phone</Form.Label>
                   <Form.Control type="number" placeholder="Enter your Phone Number" />
                 </Form.Group>
                 </Form.Group>
                 <Form.Group controlId="formMessage">
-                  <Form.Label>Message</Form.Label>
+                  <Form.Label name="message">Message</Form.Label>
                   <Form.Control as="textarea" rows={2} placeholder="Enter your Message" style={{resize:"none"}}/>
                 </Form.Group>
                 <Button variant="primary" type="submit">
@@ -35,28 +43,33 @@ const ContactForm = () => {
             </Col>
             <Col> 
             <Container>
-              <Row>
+              <Row className="text-dark">
                 <div className="col-sm-12 col-md-6 col-lg-4">
+                  <article className="mb-5">
                     <Card className="shadow-sm">
                       <Card.Body className="d-flex flex-column justify-content-center text-center">
                         <a href="tel:849-882-8698">
                         <Card.Title><FaPhone/></Card.Title>
-                        <Card.Text>849-882-8698</Card.Text>
+                        <Card.Text>Call</Card.Text>
                         </a>
                       </Card.Body>
                     </Card>
+                    </article>
                       </div>
                       <div className="col-sm-12 col-md-6 col-lg-4">
+                        <article className="mb-5">
                     <Card className="shadow-sm">
                       <Card.Body className="d-flex flex-column justify-content-center text-center">
                         <a href="https://wa.me/18498828698">
                         <Card.Title><FaWhatsapp/></Card.Title>
-                        <Card.Text>849-882-8698</Card.Text>
+                        <Card.Text>Whatsapp</Card.Text>
                         </a>
                       </Card.Body>
                     </Card>
+                    </article>
                     </div>
                     <div className="col-sm-12 col-md-6 col-lg-4">
+                      <article className="mb-5">
                     <Card className="shadow-sm">
                       <Card.Body className="d-flex flex-column justify-content-center text-center">
                         <a href="https://telegram.me/Crisja04">
@@ -64,7 +77,32 @@ const ContactForm = () => {
                         <Card.Text>@Crisja04</Card.Text>
                         </a>
                       </Card.Body>
+                    </Card>   
+                    </article>  
+                    </div> 
+                    <div className="col-sm-12 col-md-6 col-lg-4">
+                      <article className="mb-5">
+                    <Card className="shadow-sm">
+                      <Card.Body className="d-flex flex-column justify-content-center text-center">
+                        <a href="mailto:cristian.javier.11@hotmail.com">
+                        <Card.Title><FaEnvelope/></Card.Title>
+                        <Card.Text>Email</Card.Text>
+                        </a>
+                      </Card.Body>
+                    </Card> 
+                    </article>    
+                    </div> 
+                    <div className="col-sm-12 col-md-6 col-lg-4">
+                      <article className="mb-5">
+                    <Card className="shadow-sm">
+                      <Card.Body className="d-flex flex-column justify-content-center text-center">
+                        <a href="https://www.linkedin.com/in/cristian-tavarez-95b27a173/">
+                        <Card.Title><FaLinkedin/></Card.Title>
+                        <Card.Text>Linkedin</Card.Text>
+                        </a>
+                      </Card.Body>
                     </Card>     
+                    </article>
                     </div> 
               </Row>
             </Container>
