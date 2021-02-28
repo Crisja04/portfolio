@@ -6,20 +6,13 @@ const ContactForm = () => {
     return (
         <>
         <Container fluid="md">
-          {/* Netlify form setup */}
-          <form name="contact" netlify netlify-honeypot="bot-field" hidden>
-            <input type="text" name="name" />
-            <input type="email" name="email" />
-            <input type="number" name="phone" />
-            <textarea name="message"></textarea>
-          </form>
           <Row>
             <Col xs={12} md={6}>
               <Form name="contact">
                  <input type="hidden" name="form-name" value="contact" />
                 <Form.Group controlId="formName">
                   <Form.Label name="name">Name</Form.Label>
-                  <Form.Control type="email" placeholder="Enter your Name" />
+                  <Form.Control type="text" placeholder="Enter your Name" />
                 </Form.Group>
                 <Form.Group controlId="formName">
                   <Form.Label name="email">Email address</Form.Label>
