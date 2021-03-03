@@ -79,54 +79,55 @@ const ContactForm = () => {
       {submitModal()}
       <Container fluid="md">
         <Row>
-          <Col xs={12} md={6} className="mb-5">
+          <Col xs={12} md={6} className="mb-5 mr-5">
             <Form name="contact" onSubmit={handleSubmit}>
               <input type="hidden" name="form-name" value="contact" />
               <Form.Group controlId="formName">
-                <Form.Label name="name">Name</Form.Label>
                 <Form.Control
                   type="text"
-                  placeholder="Enter your Name"
+                  placeholder="Name"
                   value={person.name}
                   onChange={(e) => setPerson({ ...person, name: e.target.value })}
+                  className="shadow-sm rounded-lg mb-4"
                   required
                 />
               </Form.Group>
               <Form.Group controlId="formName">
-                <Form.Label name="email">Email address</Form.Label>
                 <Form.Control
                   type="email"
-                  placeholder="Enter your Email"
+                  placeholder="Email"
                   value={person.email}
                   onChange={(e) => setPerson({ ...person, email: e.target.value })}
+                  className="shadow-sm rounded-lg mb-4"
                   required
                 />
-                <Form.Text className="text-muted">We'll never share your email with anyone else.</Form.Text>
                 <Form.Group controlId="formName">
-                  <Form.Label name="phone">Phone</Form.Label>
                   <Form.Control
                     type="text"
-                    placeholder="Enter your Phone Number"
+                    placeholder="Phone Number"
                     value={person.phone}
                     onChange={(e) => setPerson({ ...person, phone: e.target.value })}
+                    className="shadow-sm rounded-lg mb-4"
                   />
                 </Form.Group>
               </Form.Group>
               <Form.Group controlId="formMessage">
-                <Form.Label name="message">Message</Form.Label>
                 <Form.Control
                   as="textarea"
                   rows={2}
-                  placeholder="Enter your Message"
+                  placeholder="Message"
                   value={person.message}
                   style={{ resize: "none" }}
                   onChange={(e) => setPerson({ ...person, message: e.target.value })}
+                  className="shadow-sm rounded-lg mb-4"
                   required
                 />
               </Form.Group>
-              <Button variant="primary" type="submit">
-                Send
-              </Button>
+              <div className="d-flex justify-content-center">
+                <Button variant="primary" type="submit" className="align-self-center">
+                  Send
+                </Button>
+              </div>
             </Form>
           </Col>
           <Col>
