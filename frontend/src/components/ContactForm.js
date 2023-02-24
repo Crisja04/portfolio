@@ -137,7 +137,7 @@ const ContactForm = () => {
                   <article className="mb-5">
                     <Card className="shadow-sm">
                       <Card.Body className="d-flex flex-column justify-content-center text-center">
-                        <a href="tel:849-882-8698">
+                        <a href="#">
                           <Card.Title>
                             <FaPhone />
                           </Card.Title>
@@ -151,7 +151,7 @@ const ContactForm = () => {
                   <article className="mb-5">
                     <Card className="shadow-sm">
                       <Card.Body className="d-flex flex-column justify-content-center text-center">
-                        <a href="https://wa.me/18498828698">
+                        <a href="#">
                           <Card.Title>
                             <FaWhatsapp />
                           </Card.Title>
