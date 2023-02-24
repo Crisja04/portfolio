@@ -137,7 +137,7 @@ const ContactForm = () => {
                   <article className="mb-5">
                     <Card className="shadow-sm">
                       <Card.Body className="d-flex flex-column justify-content-center text-center">
-                        <a>
+                        <a href="https://crisja04.me/">
                           <Card.Title>
                             <FaPhone />
                           </Card.Title>
@@ -151,7 +151,7 @@ const ContactForm = () => {
                   <article className="mb-5">
                     <Card className="shadow-sm">
                       <Card.Body className="d-flex flex-column justify-content-center text-center">
-                        <a>
+                        <a href="https://crisja04.me/">
                           <Card.Title>
                             <FaWhatsapp />
                           </Card.Title>
